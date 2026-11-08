@@ -1,0 +1,195 @@
+## 2. Comparaison générale des licences Microsoft 365 E3 et E5
+
+### 2.1. Composition générale des licences
+
+Les licences Microsoft 365 E3 et E5 regroupent plusieurs services Microsoft destinés à couvrir les besoins de productivité, de gestion des terminaux, d'identité et de sécurité.
+
+| Composant | Microsoft 365 E3 | Microsoft 365 E5 |
+|---|---|---|
+| Office 365 | Office 365 E3 | Office 365 E5 |
+| Enterprise Mobility + Security | EMS E3 | EMS E5 |
+| Windows Enterprise | Windows Enterprise E3 | Windows Enterprise E5 |
+| Microsoft Defender for Endpoint | Plan 1 | Plan 2 |
+| Microsoft Entra ID | Plan 1 | Plan 2 |
+| Microsoft Intune | Plan 1, avec droits additionnels annoncés en 2026 selon éligibilité | Plan 1, avec droits additionnels annoncés en 2026 selon éligibilité |
+| Microsoft Defender for Office 365 | Plan 1, selon le déploiement du packaging 2026 | Plan 2 |
+| Microsoft Defender for Identity | Non inclus dans le socle standard | Inclus |
+| Microsoft Defender for Cloud Apps | Non inclus dans le socle standard | Inclus |
+| Microsoft Purview | Fonctionnalités de conformité de base et certaines fonctions DLP | Fonctionnalités avancées selon les droits associés |
+| Microsoft Sentinel | Non inclus | Non inclus |
+| Microsoft Defender for Cloud | Facturation Azure distincte | Facturation Azure distincte |
+
+> **Attention :** cette comparaison présente les grandes lignes du packaging. Les droits exacts dépendent du contrat, du SKU, du pays, de la date de souscription et des éventuelles évolutions de packaging. Il faut toujours vérifier les Product Terms et les informations de licence du tenant.
+
+### 2.2. Comparaison par domaine fonctionnel
+
+| Domaine | Microsoft 365 E3 | Microsoft 365 E5 |
+|---|---|---|
+| Productivité | Applications Office et services Microsoft 365 | Applications Office et services Microsoft 365 avec capacités avancées selon les services |
+| Messagerie Exchange Online | Exchange Online Plan 2 | Exchange Online Plan 2 |
+| SharePoint Online | SharePoint Online Plan 2 | SharePoint Online Plan 2 |
+| OneDrive | OneDrive for Business Plan 2 | OneDrive for Business Plan 2 |
+| Identité | Microsoft Entra ID P1 | Microsoft Entra ID P2 |
+| MFA | Oui | Oui |
+| Conditional Access | Oui | Oui |
+| Identity Protection | Non inclus dans Entra ID P1 | Oui, via Entra ID P2 |
+| Privileged Identity Management (PIM) | Non inclus dans Entra ID P1 | Oui, via Entra ID P2 |
+| Endpoint Security | Microsoft Defender for Endpoint P1 | Microsoft Defender for Endpoint P2 |
+| EDR | Non inclus dans MDE P1 | Oui, via MDE P2 |
+| Antivirus nouvelle génération | Oui | Oui |
+| Attack Surface Reduction | Oui, selon les fonctionnalités du plan | Oui, avec capacités avancées selon les fonctionnalités du plan |
+| Threat & Vulnerability Management | Capacités limitées | Capacités avancées |
+| Email Security | Defender for Office 365 P1 selon éligibilité | Defender for Office 365 P2 |
+| Identity Threat Detection | Non inclus | Microsoft Defender for Identity |
+| Cloud App Security | Non inclus dans le socle standard | Microsoft Defender for Cloud Apps |
+| Data Loss Prevention | Fonctionnalités de base selon les workloads | Capacités avancées selon les droits Purview |
+| Insider Risk Management | Non inclus dans le socle standard | Disponible selon les droits de licence |
+| Microsoft Sentinel | Facturation Azure distincte | Facturation Azure distincte |
+
+### 2.3. Principales différences en matière de Microsoft Security
+
+#### Microsoft Entra ID
+
+| Fonctionnalité | Entra ID P1 - E3 | Entra ID P2 - E5 |
+|---|---|---|
+| MFA | Oui | Oui |
+| Conditional Access | Oui | Oui |
+| Dynamic Groups | Oui | Oui |
+| Self-Service Password Reset | Oui, selon configuration | Oui, selon configuration |
+| Identity Protection | Non | Oui |
+| Risky Users | Non | Oui |
+| Risky Sign-ins | Non | Oui |
+| Privileged Identity Management (PIM) | Non | Oui |
+| Access Reviews | Fonctionnalités limitées selon les droits | Oui |
+| Entitlement Management | Oui, selon les droits P1 | Oui |
+
+#### Microsoft Defender for Endpoint
+
+| Fonctionnalité | MDE Plan 1 - E3 | MDE Plan 2 - E5 |
+|---|---|---|
+| Next-generation Antivirus | Oui | Oui |
+| Attack Surface Reduction | Oui | Oui |
+| Firewall Management | Oui | Oui |
+| Device Control | Oui | Oui |
+| Endpoint Detection and Response (EDR) | Non | Oui |
+| Automated Investigation and Remediation | Non | Oui |
+| Threat & Vulnerability Management | Capacités limitées | Oui |
+| Threat Analytics | Non | Oui |
+| Advanced Hunting | Capacités dépendantes des services et droits disponibles | Oui |
+| Endpoint Detection | Protection antivirus et prévention | Détection et réponse avancées |
+
+#### Microsoft Defender for Office 365
+
+| Fonctionnalité | Plan 1 | Plan 2 |
+|---|---|---|
+| Safe Links | Oui | Oui |
+| Safe Attachments | Oui | Oui |
+| Anti-phishing | Oui | Oui |
+| Threat Explorer | Non | Oui |
+| Automated Investigation and Response | Non | Oui |
+| Attack Simulation Training | Non | Oui |
+| Advanced Hunting | Selon les fonctionnalités et licences disponibles | Oui, via les capacités associées |
+
+> **Point de vigilance :** Microsoft a annoncé l'intégration de Defender for Office 365 Plan 1 dans Microsoft 365 E3 dans le cadre des évolutions de packaging de 2026. Le déploiement est progressif. Il faut vérifier l'éligibilité et la disponibilité effective dans le tenant.
+
+### 2.4. Évolutions du packaging Microsoft en 2026
+
+Microsoft a annoncé des évolutions du packaging Microsoft 365 applicables à partir de juillet 2026, avec un déploiement progressif.
+
+| Licence | Évolutions annoncées |
+|---|---|
+| Microsoft 365 E3 | Defender for Office 365 Plan 1, Intune Remote Help, Intune Advanced Analytics et Intune Plan 2 |
+| Microsoft 365 E5 | Évolutions E3, ainsi que Endpoint Privilege Management, Microsoft Cloud PKI et Enterprise Application Management |
+
+Ces évolutions doivent être interprétées en tenant compte des conditions suivantes :
+
+- Le déploiement peut être progressif selon les tenants.
+- Les droits peuvent dépendre du contrat et du SKU souscrit.
+- Les notifications Microsoft 365 Message Center doivent être consultées.
+- Les droits effectifs doivent être contrôlés dans le portail Microsoft 365 et dans les documents contractuels.
+- L'intégration d'une fonctionnalité dans une suite ne signifie pas nécessairement que toutes les fonctionnalités d'une suite complémentaire sont incluses.
+
+### 2.5. Produits et services nécessitant une licence ou une facturation distincte
+
+Certains produits Microsoft Security ne sont pas inclus directement dans Microsoft 365 E3 ou E5.
+
+| Produit | Modèle de licence ou de facturation |
+|---|---|
+| Microsoft Sentinel | Facturation Azure selon l'ingestion, la rétention et les fonctionnalités utilisées |
+| Microsoft Defender for Cloud | Facturation Azure selon les plans de protection activés |
+| Microsoft Defender for Endpoint for Servers | Licence serveur spécifique |
+| Microsoft Entra Suite | Licence complémentaire selon les fonctionnalités souhaitées |
+| Microsoft Intune Suite | Licence complémentaire selon les droits déjà inclus |
+| Microsoft Security Copilot | Modèle de capacité ou de facturation spécifique, à vérifier selon l'offre |
+| Microsoft Defender for Cloud Apps | Inclus dans certaines suites E5 ou disponible en licence autonome |
+| Microsoft Defender for Identity | Inclus dans certaines suites E5 ou disponible en licence autonome |
+
+**Important :** Microsoft Sentinel et Microsoft Defender for Cloud reposent sur des modèles de facturation Azure. La possession d'une licence Microsoft 365 E5 ne dispense donc pas de vérifier les coûts liés à leur utilisation.
+
+### 2.6. Synthèse des avantages
+
+| Critère | Microsoft 365 E3 | Microsoft 365 E5 |
+|---|---|---|
+| Niveau de sécurité | Protection standard | Protection avancée |
+| Identité | Entra ID P1 | Entra ID P2 |
+| Gestion des privilèges | Fonctionnalités limitées | PIM |
+| Protection Endpoint | Defender for Endpoint P1 | Defender for Endpoint P2 |
+| Détection et réponse Endpoint | Non disponible dans MDE P1 | EDR et investigation automatisée |
+| Protection des identités hybrides | Non incluse dans le socle standard | Defender for Identity |
+| Protection des applications Cloud | Non incluse dans le socle standard | Defender for Cloud Apps |
+| Protection des emails | Defender for Office 365 P1 selon éligibilité | Defender for Office 365 P2 |
+| Conformité | Fonctions de base | Fonctions avancées selon les droits |
+| Coût | Plus économique | Plus élevé |
+
+### 2.7. Recommandations d'architecture
+
+**Microsoft 365 E3 :**
+
+Adapté aux organisations qui souhaitent disposer d'un socle Microsoft 365 avec des capacités de sécurité et de gestion des identités standard.
+
+Recommandations :
+
+- Déployer Microsoft Entra ID P1.
+- Mettre en place Conditional Access et MFA.
+- Exploiter Microsoft Defender for Endpoint P1.
+- Déployer Microsoft Intune pour la gestion des terminaux.
+- Définir les politiques de conformité et de sécurité.
+- Étudier les besoins complémentaires en matière d'EDR, ITDR et protection Cloud.
+
+**Microsoft 365 E5 :**
+
+Adapté aux organisations qui souhaitent renforcer leur posture de sécurité et disposer de capacités avancées de détection, d'investigation et de réponse.
+
+Recommandations :
+
+- Exploiter Microsoft Entra ID P2 et Privileged Identity Management.
+- Déployer Microsoft Defender for Endpoint P2.
+- Intégrer Microsoft Defender for Identity pour la détection des menaces sur Active Directory.
+- Exploiter Microsoft Defender for Cloud Apps pour la visibilité et le contrôle des applications Cloud.
+- Déployer Microsoft Defender for Office 365 Plan 2.
+- Exploiter les fonctionnalités avancées de Microsoft Purview selon les besoins de conformité.
+- Intégrer les solutions dans Microsoft Defender XDR.
+- Étudier l'intégration avec Microsoft Sentinel pour la supervision SIEM/SOAR.
+
+### 2.8. Références Microsoft et gouvernance des licences
+
+Les références suivantes doivent être utilisées pour valider les droits de licence avant tout déploiement :
+
+- [Microsoft 365 Enterprise Licensing Guidance](https://www.microsoft.com/licensing/docs/view/Microsoft-365-Enterprise)
+- [Microsoft Product Terms](https://www.microsoft.com/licensing/terms/)
+- [Microsoft 365 Pricing and Packaging Updates](https://www.microsoft.com/en-us/licensing/news/)
+- [Microsoft Entra documentation](https://learn.microsoft.com/en-us/entra/)
+- [Microsoft Defender documentation](https://learn.microsoft.com/en-us/defender/)
+- [Microsoft Purview documentation](https://learn.microsoft.com/en-us/purview/)
+
+**Règles de gouvernance :**
+
+1. Vérifier le SKU exact attribué à chaque utilisateur.
+2. Vérifier les droits de licence associés à chaque fonctionnalité.
+3. Distinguer les licences utilisateur des licences serveur.
+4. Identifier les licences complémentaires et les coûts Azure.
+5. Contrôler les évolutions de packaging et les notifications Microsoft.
+6. Documenter les hypothèses de licence dans le dossier d'architecture.
+7. Réaliser une revue périodique des licences et des fonctionnalités réellement utilisées.
+
+> **Règle d'architecture :** le choix entre Microsoft 365 E3 et E5 doit être fondé sur les exigences de sécurité, les scénarios d'usage, les risques métier, les besoins SOC et les obligations réglementaires, et non uniquement sur le nombre de fonctionnalités disponibles.
