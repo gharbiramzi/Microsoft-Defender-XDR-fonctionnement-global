@@ -1,0 +1,101 @@
+Microsoft Defender XDR –
+1. Microsoft Defender XDR : plateforme unifiée de détection et de réponse aux menaces
+Microsoft Defender XDR (Extended Detection and Response) est une plateforme de sécurité qui centralise les signaux de sécurité provenant de plusieurs domaines : les postes de travail, les serveurs, les identités, les emails et les applications cloud.
+
+Son objectif est de détecter, corréler, investiguer et remédier aux cyberattaques en offrant au SOC une vision globale de l’incident plutôt qu'une analyse isolée de chaque alerte.
+Principales fonctionnalités de Microsoft Defender XDR
+- Collecte des signaux de sécurité : récupération des alertes et événements provenant des différentes solutions Microsoft Defender.
+- Corrélation des alertes : rapprochement des événements liés à une même attaque pour identifier les incidents complexes.
+- Gestion centralisée des incidents : regroupement des alertes dans le Microsoft Defender Portal avec une chronologie des événements.
+- Investigation : analyse des comptes, appareils, emails, fichiers, applications et activités impliqués.
+- Réponse aux incidents : isolation d'un appareil, neutralisation d'un email malveillant, désactivation ou sécurisation d'un compte compromis, selon les capacités et autorisations disponibles.
+- Automatisation : utilisation des mécanismes d'investigation et de remédiation automatisées, selon les produits et licences.
+- Threat Hunting : recherche proactive des menaces avec Advanced Hunting et le langage KQL.
+- Intégration SIEM/SOAR : connexion avec Microsoft Sentinel pour étendre la détection, la corrélation et l'automatisation à l'ensemble du système d'information.
+2. Les composants de Microsoft Defender XDR
+Microsoft Defender XDR s'appuie principalement sur quatre solutions de sécurité. Chacune protège un domaine spécifique et transmet ses alertes et signaux à la plateforme XDR pour permettre une corrélation globale.
+2.1 Microsoft Defender for Endpoint (MDE) – Protection des appareils
+- Protège les postes de travail, ordinateurs portables et serveurs contre les cybermenaces.
+- Détecte les malwares, ransomwares, exploits et comportements suspects.
+- Fournit des capacités EDR (Endpoint Detection and Response) pour investiguer les attaques et y répondre.
+- Permet l'isolation des appareils, l'analyse des menaces et certaines actions de remédiation.
+- Intègre notamment l'Antivirus, l'Attack Surface Reduction (ASR), le Firewall et le Device Control, selon les licences et configurations.
+2.2 Microsoft Defender for Office 365 (MDO) – Protection des emails et de la collaboration
+- Protège Exchange Online, Microsoft Teams, SharePoint Online et OneDrive contre les menaces prises en charge.
+- Détecte et neutralise les emails de phishing, le spam, les malwares et les attaques ciblées.
+- Protège contre le Business Email Compromise (BEC), l'usurpation d'identité et les liens malveillants.
+- Analyse les pièces jointes avec Safe Attachments et vérifie les URL avec Safe Links.
+- Permet l'investigation des emails et la remédiation des messages malveillants, selon le plan de licence.
+2.3 Microsoft Defender for Identity (MDI) – Protection des identités
+- Surveille les signaux d'Active Directory Domain Services (AD DS) pour détecter les activités suspectes.
+- Détecte les comportements associés aux comptes compromis, aux attaques Kerberos, au vol d'identifiants et aux mouvements latéraux.
+- Identifie les techniques d'attaque visant les contrôleurs de domaine et les identités privilégiées.
+- Fournit des alertes et des informations d'investigation sur les activités suspectes.
+- Complète Microsoft Entra ID : MDI se concentre notamment sur les signaux Active Directory locaux et hybrides, tandis qu'Entra ID Protection apporte des capacités de détection des risques liés aux identités cloud.
+2.4 Microsoft Defender for Cloud Apps (MDCA) – Protection des applications cloud (CASB)
+- Cloud Discovery : identifie les applications cloud utilisées dans l'organisation, notamment les applications non autorisées (Shadow IT).
+- Cloud App Catalog : fournit un catalogue d'applications cloud avec des informations sur leur niveau de risque.
+- App Governance : permet de surveiller et de contrôler les applications OAuth connectées à des environnements tels que Microsoft 365, Google Workspace et Salesforce.
+- Activity Log : centralise les activités issues des applications connectées et des sources de données prises en charge.
+- Governance Log : permet de consulter les actions de gouvernance exécutées, leur statut et les éventuels échecs.
+- Policies : définit des stratégies de détection et de contrôle des activités, des applications et des comportements à risque.
+- Conditional Access App Control : permet, dans les scénarios pris en charge, de contrôler les sessions d'accès aux applications cloud.
+MDCA apporte ainsi une visibilité sur l'utilisation des applications SaaS, les risques associés et les comportements suspects. 
+Microsoft Learn+3
+
+3. Microsoft Defender for Cloud – Sécurité des environnements cloud
+Microsoft Defender for Cloud (MDFC) est une solution de sécurité destinée à protéger les infrastructures cloud et hybrides. Elle complète Microsoft Defender XDR, mais ne constitue pas l'un des quatre composants historiques principaux de Defender XDR.
+- CSPM (Cloud Security Posture Management) : évalue la posture de sécurité et identifie les mauvaises configurations.
+- Protection multicloud : apporte des capacités de sécurité pour Azure, AWS et Google Cloud.
+- CWPP (Cloud Workload Protection Platform) : protège les ressources et workloads pris en charge, tels que les machines virtuelles, conteneurs et bases de données.
+- Threat Detection : détecte les activités suspectes et les menaces ciblant les ressources cloud.
+- Regulatory Compliance : évalue la conformité à différents référentiels de sécurité.
+- Recommandations et remédiation : propose des mesures correctives et des mécanismes d'automatisation selon les scénarios disponibles.
+4. Fonctionnement global de Microsoft Defender XDR
+les composants collaborent pour détecter et traiter une attaque.
+Il couvre :
+1. Les quatre solutions principales : MDE, MDO, MDI et MDCA.
+2. La corrélation des alertes et la création d'incidents unifiés.
+3. L'investigation SOC et Advanced Hunting avec KQL.
+4. Les actions de réponse et de remédiation.
+5. L'intégration avec Microsoft Sentinel (SIEM/SOAR).
+6. Defender for Cloud comme solution complémentaire.
+
+Exemple concret d'une attaque :
+1. Un utilisateur reçoit un email de phishing : MDO détecte le message malveillant.
+2. L'utilisateur clique sur le lien : l'activité est analysée.
+3. Un logiciel malveillant est exécuté sur son poste : MDE détecte le comportement suspect.
+4. L'attaquant tente de compromettre un compte Active Directory : MDI détecte les activités anormales.
+5. L'attaquant tente d'accéder à une application SaaS : MDCA identifie l'activité suspecte.
+6. Defender XDR corrèle les alertes et construit un incident global.
+7. Le SOC analyse l'incident et déclenche les actions de réponse adaptées.
+
+
+5. Les autres solutions Microsoft Security à connaître
+Il est important de distinguer les composants de Defender XDR des solutions qui complètent l'écosystème Microsoft Security.
+Solution	Rôle principal
+Microsoft Entra ID	Gestion des identités, authentification, MFA, Conditional Access et PIM
+Microsoft Intune	Gestion et sécurisation des terminaux (MDM/MAM)
+Microsoft Purview	Protection des données, DLP, classification et conformité
+Microsoft Sentinel	SIEM/SOAR, collecte et corrélation des événements de sécurité
+Microsoft Defender for Cloud	Sécurité des infrastructures cloud et multicloud
+
+6. Synthèse : ce que permet Microsoft Defender
+Microsoft Defender constitue un ensemble de solutions de cybersécurité permettant de :
+- Protéger : les endpoints, les identités, les emails, les applications cloud et les workloads.
+- Détecter : les malwares, ransomwares, attaques de phishing, compromissions de comptes et comportements anormaux.
+- Investiguer : analyser les alertes, les événements et les techniques utilisées par les attaquants.
+- Répondre : isoler les appareils, neutraliser les emails malveillants et sécuriser les comptes compromis.
+- Centraliser : gérer les incidents et les investigations depuis le Microsoft Defender Portal.
+- Automatiser : accélérer la détection et la remédiation des menaces.
+- Améliorer la posture de sécurité : réduire la surface d'attaque et renforcer la stratégie Zero Trust.
+Point essentiel à retenir
+
+Microsoft Defender XDR n'est pas simplement un antivirus centralisé. C'est une plateforme qui corrèle les signaux de sécurité de plusieurs domaines pour reconstituer une attaque, comprendre son périmètre et coordonner la réponse du SOC.
+
+Attention : les capacités disponibles dépendent des licences, des produits déployés, des configurations et des autorisations. Microsoft Entra, Intune, Purview, Sentinel et Defender for Cloud sont des solutions complémentaires ; elles ne doivent pas toutes être présentées comme des composants natifs de Defender XDR.
+
+Documentation Microsoft officielle :
+- Microsoft Defender XDR et Zero Trust
+- Déployer les services pris en charge par Defender XDR
+- Intégration Microsoft Defender XDR avec Sentinel
