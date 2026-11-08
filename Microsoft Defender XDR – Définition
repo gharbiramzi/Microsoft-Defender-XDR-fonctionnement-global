@@ -14,6 +14,7 @@ Principales fonctionnalités de Microsoft Defender XDR
 - Intégration SIEM/SOAR : connexion avec Microsoft Sentinel pour étendre la détection, la corrélation et l'automatisation à l'ensemble du système d'information.
 2. Les composants de Microsoft Defender XDR
 Microsoft Defender XDR s'appuie principalement sur quatre solutions de sécurité. Chacune protège un domaine spécifique et transmet ses alertes et signaux à la plateforme XDR pour permettre une corrélation globale.
+
 2.1 Microsoft Defender for Endpoint (MDE) – Protection des appareils
 - Protège les postes de travail, ordinateurs portables et serveurs contre les cybermenaces.
 - Détecte les malwares, ransomwares, exploits et comportements suspects.
@@ -26,12 +27,15 @@ Microsoft Defender XDR s'appuie principalement sur quatre solutions de sécurit�
 - Protège contre le Business Email Compromise (BEC), l'usurpation d'identité et les liens malveillants.
 - Analyse les pièces jointes avec Safe Attachments et vérifie les URL avec Safe Links.
 - Permet l'investigation des emails et la remédiation des messages malveillants, selon le plan de licence.
+
+
 2.3 Microsoft Defender for Identity (MDI) – Protection des identités
 - Surveille les signaux d'Active Directory Domain Services (AD DS) pour détecter les activités suspectes.
 - Détecte les comportements associés aux comptes compromis, aux attaques Kerberos, au vol d'identifiants et aux mouvements latéraux.
 - Identifie les techniques d'attaque visant les contrôleurs de domaine et les identités privilégiées.
 - Fournit des alertes et des informations d'investigation sur les activités suspectes.
 - Complète Microsoft Entra ID : MDI se concentre notamment sur les signaux Active Directory locaux et hybrides, tandis qu'Entra ID Protection apporte des capacités de détection des risques liés aux identités cloud.
+
 2.4 Microsoft Defender for Cloud Apps (MDCA) – Protection des applications cloud (CASB)
 - Cloud Discovery : identifie les applications cloud utilisées dans l'organisation, notamment les applications non autorisées (Shadow IT).
 - Cloud App Catalog : fournit un catalogue d'applications cloud avec des informations sur leur niveau de risque.
@@ -51,6 +55,8 @@ Microsoft Defender for Cloud (MDFC) est une solution de sécurité destinée à 
 - Threat Detection : détecte les activités suspectes et les menaces ciblant les ressources cloud.
 - Regulatory Compliance : évalue la conformité à différents référentiels de sécurité.
 - Recommandations et remédiation : propose des mesures correctives et des mécanismes d'automatisation selon les scénarios disponibles.
+
+
 4. Fonctionnement global de Microsoft Defender XDR
 les composants collaborent pour détecter et traiter une attaque.
 Il couvre :
